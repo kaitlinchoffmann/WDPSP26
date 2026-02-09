@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    img {
+      width: 300px;
+    }
+  </style>
 </head>
 <body>
   <header>
     <!-- this is a comment!!! -->
-    <h1>Hello World!!! &#128511;</h1>
+    <h1 style="color: pink;background-color: darkorchid;">Hello World!!! &#128511;</h1>
     <br>
     <h6>I'm super tiny!</h6>
     <hr>
@@ -21,12 +26,30 @@
         <li><a href="https://google.com" target="_blank">Google</a></li>
       </ul>
     </nav>
+    <nav class="sidebar" style="color:aquamarine">
+      <ul>
+        <li><a style="color:aquamarine" href="example2.html">Post</a></li>
+        <li><a style="color:aquamarine" href="example1.html">Contact</a></li>
+        <li><a style="color:aquamarine" href="./other_folder/index.html">Something</a></li>
+        <li><a style="color:aquamarine" href="https://google.com" target="_blank">Else</a></li>
+      </ul>
+    </nav>
+    <a class="button" href="https://bing.com">Bing!</a>
   </header>
 
   <main>
-    <img src="./images/bread.jpg" alt="best looking bread in town, but Denzel's is better." width="300px">
+
+    <form>
+      <label for="content">Content: </label>
+      <input type="text" id="content">
+      <label for="author">Author: </label>
+      <input type="text" id="author">
+      <input type="submit" value="Add Post">
+    </form>
+
+    <img src="./images/bread.jpg" alt="best looking bread in town, but Denzel's is better.">
     <div>
-      <img src="./images/cat.jpg" alt="cute fluffy orange tabby" width="300px">
+      <img src="./images/cat.jpg" alt="cute fluffy orange tabby">
     </div>
     <p>
       Lorem <strong>ipsum dolor</strong> sit, amet consectetur adipisicing elit. Quo eius asperiores qui a consequatur eos voluptas ipsa expedita? Commodi atque, rem minus quas sequi itaque doloribus a provident fuga maiores.
