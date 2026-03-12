@@ -30,4 +30,8 @@ nav ul li a {
 .button {
   background-color: azure;
   color: darkgreen;
+  border: 1px solid darkgreen;
+  padding: 5px 10px;
+  border-radius: 10px;
+  /* margin: 200px; */
 }

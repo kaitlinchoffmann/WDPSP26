@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS User (
+    userId INT AUTO_INCREMENT,
+    firstName VARCHAR(50) NOT NULL,
+    lastName VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
+    CONSTRAINT userPK PRIMARY KEY(userId)
+);
+
+CREATE TABLE IF NOT EXISTS Recipe (
+    recipeId INT AUTO_INCREMENT PRIMARY KEY,
+    recipeName VARCHAR(100) NOT NULL,
+    recipeDescription VARCHAR(255) NOT NULL,
+    cookTime VARCHAR(25) NOT NULL,
+    serving INT NOT NULL,
+    userId INT NOT NULL,
+    CONSTRAINT userFK FOREIGN KEY(userId) REFERENCES User(userId)  
+);
