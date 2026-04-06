@@ -1,3 +1,6 @@
+// manipulating the DOM
+document.querySelector('h2').style.color = "hotpink"
+
 // basic printing
 console.log("Hello World!!")
 console.log(4 + 9);

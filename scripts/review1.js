@@ -1,42 +1,48 @@
-//REVIEW from JavaScript Part 1:
-console.log("hi")
+// const springBreak = {
+//   student: "Shannon",
+//   placeVisited: "Italy",
+//   time: "7 days"
+// }
 
-let num = 5
-num = 7
-num = "hello"
-console.log("Num = " + num)
-console.log(`Num = ${num}`)
+// springBreak.time = "8 days"
 
-const petName = "Petey"
-// petName = "Earl" cannot do, it's constant
-//  normal function
-function printName(firstName) {
-  return firstName
-} 
+// let timeAway = springBreak.time
+// console.log(`Time away = ${timeAway}!`)
 
-// JavaScript Part 2:
-// converting into an arrow function
-let printNameArrow = (firstName) => firstName
+// springBreak.friendVisted = "Katelyn"
 
-let myName = printNameArrow("kaitlin")
-console.log(myName)
+// console.log(springBreak)
 
-// object literals
-const edwinsCat = {
-    catName: "Matt",
-    age: 5,
-    breed: "american tabby",
-    color: "orange"
+
+// constructor example
+
+
+class Recipe {
+  constructor(id, name, ingredients) {
+    this.recipeId = id;
+    this.recipeName = name;
+    this.ingredients = ingredients;
+  }
+
+  recipeInfo() {
+    return `RecipeId: ${this.recipeId} Recipe Name: ${this.recipeName}`
+  }
 }
 
-console.log(edwinsCat)
+// function Recipe(id, name, ingredients) {
+//   this.recipeId = id;
+//   this.recipeName = name;
+//   this.ingredients = ingredients;
+// }
 
-edwinsCat.catName = "Matthew"
-console.log(edwinsCat)
+// Recipe.prototype.recipeInfo = function() {
+//   return `RecipeId: ${this.recipeId} Recipe Name: ${this.recipeName}`
+// }
 
-console.log(edwinsCat.age)
+const recipe1 = new Recipe(1234, "chicken parm", ["chicken", "tomato sauce"])
+console.log(recipe1)
 
-edwinsCat.weight = "husky"
-console.log(edwinsCat)
+console.log(recipe1.recipeInfo())
 
-// edwinsCat = "matt" //can't do since constant
+const recipe2 = new Recipe(3412, undefined, ["rice", "milk"])
+console.log(recipe2)
