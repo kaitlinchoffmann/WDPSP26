@@ -1,0 +1,29 @@
+{
+  "followers": [
+    {
+      "userId": 1,
+      "username": "cathy123",
+      "following": true
+    },
+    {
+      "userId": 2,
+      "username": "spongebob12",
+      "following": false
+    },
+    {
+      "userId": 3,
+      "username": "cathyiscool",
+      "following": true
+    },
+    {
+      "userId": 4,
+      "username": "fredfredburger",
+      "following": false
+    },
+    {
+      "userId": 5,
+      "username": "mindy1",
+      "following": true
+    }
+  ]
+}
