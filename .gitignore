@@ -1,2 +1,4 @@
 images/Icon
 .DS_Store
+
+.env
