@@ -27,3 +27,5 @@ function login(e) {
 function checkPassword(password) {
     return true;
 }
+
+export let user = "hi"
