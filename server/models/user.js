@@ -20,7 +20,7 @@ async function getAllUsers() {
     let sql = `
       SELECT * FROM User;
     `
-    await con.query(sql)
+    return await con.query(sql)
 }
 
 module.exports = { getAllUsers }
