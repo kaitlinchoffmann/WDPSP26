@@ -10,15 +10,26 @@ if(loginForm) loginForm.addEventListener('submit', login)
 function login(e) {
     e.preventDefault()
 
-    let username = document.getElementById("username").value
+    let email = document.getElementById("email").value
     let password = document.getElementById("passwd").value
     if(checkPassword(password)) {
         const user = {
-            username: username,
+            email: email,
             password: password
         }
-
-        console.log(user)
+        // make fetch call to login route in server's user.js route file
+        fetchData('/user/login', user, 'POST')
+        .then(data => {
+          if(!data.message) {
+            window.location = "recipe.html"
+          }
+        })
+        .catch(err => {
+          let error = document.getElementById("error")
+          error.innerText=err.message
+          document.getElementById("passwd").value=""
+        })
+        
     } else {
         console.log("Password sucks! Do better.")
     }
@@ -30,7 +41,7 @@ function checkPassword(password) {
 
 // fetchData function: use for POST, PUT, and DELETE. 
 // Fetch method implementation:
-export async function fetchData(route = '', data = {}, methodType) {
+async function fetchData(route = '', data = {}, methodType) {
   const response = await fetch(`http://localhost:3000${route}`, {
     method: methodType, // *POST, PUT, DELETE, etc.
     headers: {

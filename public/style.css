@@ -100,3 +100,8 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* error message */
+#error {
+    color: rgb(149, 12, 12);
+}
